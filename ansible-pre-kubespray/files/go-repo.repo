@@ -1,0 +1,4 @@
+[go-repo]
+baseurl = https://mirror.go-repo.io/centos/$releasever/$basearch/
+gpgkey = https://mirror.go-repo.io/centos/RPM-GPG-KEY-GO-REPO
+name = go-repo.io
