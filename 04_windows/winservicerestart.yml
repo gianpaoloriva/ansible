@@ -1,7 +1,7 @@
 ---
-- hosts: windows
+- hosts: all
   serial: 1
-  gather_facts: no
+  gather_facts: yes
   tasks:
     - name: Restarting the Spooler service...
       win_service:

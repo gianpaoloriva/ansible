@@ -22,3 +22,16 @@ python ec2.py
 es. ansible-playbook -i ./ec2.py --limit "tag_App_backend:&tag_Environment_staging:&tag_Usage_clock_worker" playbook.yml
    
 ```
+# Use Windows Playbook
+
+## Only for MacOs
+```
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+```
+```
+
+ansible-playbook winservicerestart.yml -i hosts --ask-pass 
+
+```
