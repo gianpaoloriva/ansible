@@ -1,0 +1,22 @@
+---
+
+- name: Prepare repositories on all nodes
+  hosts: all
+  tasks:
+    
+    - name: Yum clean all 
+      shell: yum clean all
+
+    - name: Refresh yum makecache
+      shell: yum makecache
+
+    - name: Disable Firewall 
+      shell: systemctl stop firewalld && systemctl disable firewalld &&  systemctl mask firewalld
+      ignore_errors: true 
+
+    - name: yum install python-pip
+      shell: sudo yum install python-pip -y
+
+    - name: pip install --upgrade jinja2
+      shell: sudo pip install --upgrade jinja2
+
